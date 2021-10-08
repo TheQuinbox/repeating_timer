@@ -19,3 +19,7 @@ t.stop()
 ```
 
 This will print "Hi." every second for five seconds, then it will exit. You'll notice that the time.sleep() doesn't interfeer with the timer at all, because it's threaded. That's the beauty of it!
+
+## Note.
+
+If you pass a function that takes time to execute, this time won't be taken away from how long you have until the next time the function is called.
