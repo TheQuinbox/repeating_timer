@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
  name="repeating_timer",
- version=0.1,
+ version=0.11,
  author="Quin Marilyn",
  author_email="quin.marilyn05@gmail.com",
  description="Run a function over and over in a thread",
