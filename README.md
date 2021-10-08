@@ -11,7 +11,7 @@ A package from [Q-continuum](http://hg.q-continuum.net) (with the same name) cla
 ```python
 from repeating_timer import RepeatingTimer
 
-t = RepeaintTimer(1.0, print, "Hi.")
+t = RepeatingTimer(1.0, print, "Hi.")
 t.start()
 ```
 
