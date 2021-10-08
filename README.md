@@ -9,10 +9,13 @@ A package from [Q-continuum](http://hg.q-continuum.net) (with the same name) cla
 ## Usage.
 
 ```python
+import time
 from repeating_timer import RepeatingTimer
 
 t = RepeatingTimer(1.0, print, "Hi.")
 t.start()
+time.sleep(5)
+t.stop()
 ```
 
-This will print "Hi." every second.
+This will print "Hi." every second for five seconds, then it will exit. You'll notice that the time.sleep() doesn't interfeer with the timer at all, because it's threaded. That's the beauty of it!
