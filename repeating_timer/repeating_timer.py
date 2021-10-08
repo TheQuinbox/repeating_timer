@@ -13,8 +13,8 @@ class RepeatingTimer(threading.Thread):
   while not self.stopped.wait(self.interval):
    try:
     self.function(*self.args, **self.kwargs)
-   except:
-    pass
+   except Exception as e:
+    raise e
 
  def stop(self):
   self.stopped.set()
