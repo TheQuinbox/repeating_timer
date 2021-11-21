@@ -10,13 +10,13 @@ class RepeatingTimer(threading.Thread):
 		self.args = args
 		self.kwargs = kwargs
 		self.stopped = threading.Event()
-
+	
 	def run(self):
 		while not self.stopped.wait(self.interval):
 			try:
 				self.function(*self.args, **self.kwargs)
 			except Exception as e:
 				raise e
-
+	
 	def stop(self):
 		self.stopped.set()
