@@ -3,6 +3,8 @@ import threading
 class RepeatingTimer(threading.Thread):
 	def __init__(self, interval, function, *args, **kwargs):
 		threading.Thread.__init__(self)
+		if interval <= 0:
+			raise ValueError("'interval' must be grater than 0.")
 		self.interval = interval
 		self.function = function
 		self.args = args
